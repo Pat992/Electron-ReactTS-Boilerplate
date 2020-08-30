@@ -1,7 +1,10 @@
 {
-  "name": "src",
+  "name": "electron-react-boilerplate",
+  "author": "Patrick Hettich",
   "version": "0.1.0",
   "private": true,
+  "main": "electron/main.js",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -10,16 +13,23 @@
     "@types/node": "^12.12.54",
     "@types/react": "^16.9.46",
     "@types/react-dom": "^16.9.8",
+    "electron-is-dev": "^1.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "wait-on": "^5.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test --env=jsdom",
+    "react-eject": "react-scripts eject",
+    "electron-build": "electron-builder",
+    "release": "yarn react-build && electron-builder --publish=always",
+    "build": "yarn react-build && yarn electron-build",
+    "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +45,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "yarn": "^1.22.4",
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.2",
+    "electron-builder": "^22.8.0",
+    "electron": "^9.2.1"
   }
 }
