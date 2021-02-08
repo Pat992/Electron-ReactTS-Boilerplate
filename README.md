@@ -7,5 +7,5 @@ In the project directory, you can run:
 Start with:
 ### `npm start`
 
-Build installer with:
-### `npm build`
+Build installer with (Make sure to have the latest version of NodeJS):
+### `npm run-script build`
