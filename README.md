@@ -5,9 +5,7 @@ inside the ./src folder you can write your reactTS code.
 
 ## electron
 feel free to write your electron-code wherever.
-but it would look cleaner if written inside the ./electron folder
-
-In the project directory, you can run:
+but I would advise to write it inside the ./electron folder, to keep the project cleaner
 
 ## Icon
 Create an ./icon folder and inside there use your own icon for the program.
