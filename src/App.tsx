@@ -1,6 +1,4 @@
-import React from 'react';
-
-function App() {
+const App = () => {
   return (
     <div>
       <h1>Electron with reactTS</h1>
