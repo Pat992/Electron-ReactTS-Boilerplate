@@ -15,5 +15,5 @@ either call it "logo.ico" or rename it inside the build in package.json
 Start the application with:
 ### `npm start`
 
-Build installer with (Make sure to have the latest version of NodeJS):
+Build installer (Make sure to have the latest version of NodeJS):
 ### `npm run-script build`
